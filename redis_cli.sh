@@ -1,0 +1,1 @@
+docker exec -it churros_redis_1 redis-cli
