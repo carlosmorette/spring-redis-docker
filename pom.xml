@@ -47,7 +47,7 @@
 			<version>5.0.0</version>
 		</dependency>
 
-		<!-- Lombok -->
+		<!-- Lombok (Utils) -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -62,14 +62,27 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- DB-->
+		<!-- Validator -->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>8.0.1.Final</version>
+		</dependency>
+
+		<!-- Hibernate and DB -->
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>6.5.2.Final</version>
+			<version>6.6.0.Final</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.4</version>
+		</dependency>
 
+		<!-- TODO: flyway to manage migrations -->
 	</dependencies>
 
 	<build>

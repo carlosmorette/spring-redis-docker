@@ -1,0 +1,1 @@
+docker exec -it churros_postgres_1 psql -U postgres -d churros

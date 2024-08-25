@@ -1,5 +1,6 @@
 package com.churros.controller;
 
+import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.churros.dto.SetDTO;
 import com.churros.http.ApiResponse;
+import com.churros.repository.UserRepository;
 import com.churros.service.RedisService;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +21,13 @@ public class CacheController {
 
   @Autowired
   private RedisService<String, String> redisService;
+
+  @GetMapping("/testing")
+  public String testing( ) {
+    new UserRepository().findById(1);
+      return "Joao";
+  }
+  
 
   @GetMapping("/{key}")
   public ResponseEntity<ApiResponse> getMethodName(@PathVariable String key) {
